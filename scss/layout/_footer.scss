@@ -1,0 +1,314 @@
+
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+
+.footer{    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative; 
+    background: #0B1124;
+    color: #FFFFFF;
+
+    &__top{
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 30px;
+        &-left{
+            @include flexbox;
+            @include align-items(center);
+        }
+       
+        &-right{
+            
+        }
+    }
+
+    
+    &__slogan{
+        color: $color-white;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        padding-left: 30px;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            top: -6px;
+            bottom: -6px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            width: 1px;
+        }
+        span{
+            display:block;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-orange;
+            margin-top: 4px;
+            
+            
+        }
+    }
+    
+
+    &__main{
+        @include flexbox;
+        @include justify-content(space-between);
+        padding-top: 45px;
+        padding-bottom: 40px;
+        margin: 0 -20px;
+        &-col{
+            padding:0 20px;
+            width: 16%;
+            
+            &--2{
+               width:  20%;
+            }
+        }
+    }
+    
+    &-nav{
+        &-title{
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            a{
+                color: $color-white;
+                &:hover{
+                    color: $color-orange;
+                }
+                svg{
+                    display:none;
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - 3.5px);
+                    fill:currentColor;
+                    transition: $default-transition;
+                }
+            }
+            
+            
+            &.active{
+                a{
+                    svg{
+                        transform:rotate(-180deg);
+                    }
+                }
+            }
+            
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+        }
+        
+       font-size: 14px;
+        line-height: 15px;
+        
+        &-item{
+            margin-bottom:15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &__link{
+                color: rgba($color-white, 0.6);          
+                &:hover{
+                    color: $color-white;
+                }
+            }
+        }
+        
+    }
+    
+    &-contact{
+        text-align: right;
+        color: $color-white;
+            line-height: 1;
+        &__phone{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 36px;
+            color: $color-white;
+            &:hover{
+                color: $color-orange;
+            }
+        }
+        &__mail{
+            font-size: 15px;
+            line-height: 22px;
+            color: rgba($color-white, 0.6);
+            &:hover{
+                color: $color-white;
+            }
+        }
+        &__address{
+            margin-top: 20px;
+            line-height: 1.4;
+            font-size: 15px;
+        }
+    }
+    
+    
+    &__bottom{
+        font-size: 12px;
+        line-height: 15px;
+        color:$color-white; 
+    }
+    
+    &__copy{
+        padding-right: 48px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    &__rules{
+        color: $color-orange;
+        display: inline-block;
+        vertical-align: middle;
+        &:hover{
+            color: $color-white;
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    .footer-contact__phone{
+        font-size: 16px;
+    }
+    .footer-nav-title{
+        font-size: 15px;
+    }
+    .footer-nav{
+        font-size: 12px;
+    }
+    .footer__main{
+        margin: 0 -15px;
+    }
+    .footer__main-col {
+        padding: 0 15px;
+    }
+    .footer-contact__address{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer__slogan {
+        font-size: 12px;
+        line-height: 15px;
+        span{
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    .footer__main-col{
+        width: 100%;
+    }
+
+    .footer-nav{
+        display: none;
+        font-size: 14px;
+        padding: 5px 0 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .footer-nav-title{
+        margin-bottom: 0px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 38px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: $default-transition;
+        &.active{
+            border-color: transparent;
+        }
+    }
+    .footer__main{
+        @include flex-direction(column);
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    .footer-nav-title a{
+        display: block;
+        position: relative;
+    }
+    .footer-nav-title a svg{
+        display: block;
+    }
+    
+    .footer__top{
+        padding-bottom: 20px;
+    }
+    .footer-contact{
+        padding-top: 20px;
+        text-align: left;
+    }
+    .footer-contact__phone {
+        font-size: 18px;
+    }
+    .footer-contact__address {
+        font-size: 14px;
+    }
+    .footer{
+        padding: 30px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer__top{
+        @include flex-wrap(wrap);
+        &-left{
+            width:100%;
+            padding-bottom: 15px;
+        }
+        &-right{
+            width:100%;
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+    .footer-nav-title a{
+        &:hover{
+            color: $color-white;
+        }
+    }
+}
+
+
+@media screen and (max-width: 639px) {
+    
+}
+
+@media screen and (max-width: 479px) {
+    
+    .footer__top-left{
+        @include flex-wrap(wrap);
+    }
+    .footer__slogan {
+        width: 100%;
+        padding: 16px 0 0 0;
+        letter-spacing: -0.3px;
+        &:before{
+            display: none;
+        }
+    }
+    .footer__copy{
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    
+}

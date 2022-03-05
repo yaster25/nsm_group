@@ -1,0 +1,22 @@
+@import 'utils/_mixins';
+@import 'utils/_variables';
+
+@import "base/_reset";
+@import "base/_fonts";
+
+
+@import "components/_slick";
+@import "components/_fancybox";
+//@import "components/_animate";
+//@import "components/_daterangepicker";
+
+
+//@import "components/_selectric";
+//@import "components/_tooltipster";
+//@import "components/_OverlayScrollbars";
+
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_content";
+
+
