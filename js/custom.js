@@ -33,6 +33,7 @@ $(document).ready(function(){
         $(this).parents('.tabs').find('.tabs-content').hide();
         $(this).parents('.tabs').find('.tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').fadeIn();
         $('.js-slider-reviews').slick('setPosition');
+        $('.js-slider-reviews-2').slick('setPosition');
         
         
         if($(this).parents('.tabs').find('.tabs-nav-title').length){
@@ -64,7 +65,13 @@ $(document).ready(function(){
             nextArrow:'<button type="button" class="slick-next"><svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.126 0 0 1.15 4.747 6 0 10.85 1.126 12 7 6 1.126 0Z"/></svg></button>',
             appendArrows:$(this).parents('.slider-wrapper').find('.slider-nav'),
             swipeToSlide:true,
-            responsive: [   
+            responsive: [  
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow:4
+                    }
+                },
                 {
                     breakpoint: 992,
                     settings: {
@@ -73,7 +80,50 @@ $(document).ready(function(){
                 }
             ]
         });
-    }); 
+    });
+    
+    $('.js-slider-reviews-2').each(function() {  
+        $(this).slick({
+            infinite:true,
+            arrows:true,
+            dots:false,
+            slidesToShow:5,
+            slidesToScroll: 1,
+            prevArrow:'<button type="button" class="slick-prev"><svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.874 0 7 1.15 2.253 6 7 10.85 5.874 12 0 6l5.874-6Z" /></svg></button>',
+            nextArrow:'<button type="button" class="slick-next"><svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.126 0 0 1.15 4.747 6 0 10.85 1.126 12 7 6 1.126 0Z"/></svg></button>',
+            appendArrows:$(this).parents('.slider-wrapper').find('.slider-nav'),
+            swipeToSlide:true,
+            responsive: [  
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow:4
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow:3
+                    }
+                }
+                ,
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow:2
+                    }
+                },
+                {
+                    breakpoint: 375,
+                    settings: {
+                        slidesToShow:1
+                    }
+                }
+            ]
+        });
+    });
+    
+    
     
      $('.faq-item__title').on('click', function(event) {          
         $(this).parent('.faq-item').toggleClass('active');       

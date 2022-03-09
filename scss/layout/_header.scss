@@ -339,17 +339,17 @@
 .menu-trigger{
     display: none;
     height: 16px;
-    width: 30px;
+    width: 26px;
     position: absolute;
     left: 15px;
     top: calc(50% - 8px);
 }
 
-.hamburger { display: block; cursor: pointer;  font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; background: transparent;width: 30px; height: 16px; transition: all 0.2s;}
+.hamburger { display: block; cursor: pointer;  font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; background: transparent;width: 26px; height: 16px; transition: all 0.2s;}
 
-.hamburger-box{ width: 30px; height:16px; display:block; position: relative;}
+.hamburger-box{ width: 26px; height:16px; display:block; position: relative;}
 .hamburger-inner{ display: block; top: 50%; margin-top: -2px; }
-.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before { width:30px; height:2px; background-color:$color-orange; position: absolute; transition-property: -webkit-transform; -webkit-transition-property: -webkit-transform; transition-property: transform; transition-property: transform,-webkit-transform; -webkit-transition-duration: .15s; transition-duration: .15s; -webkit-transition-timing-function: ease; transition-timing-function: ease; transition: $default-transition; }
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before { width:26px; height:2px; background-color:$color-orange; position: absolute; transition-property: -webkit-transform; -webkit-transition-property: -webkit-transform; transition-property: transform; transition-property: transform,-webkit-transform; -webkit-transition-duration: .15s; transition-duration: .15s; -webkit-transition-timing-function: ease; transition-timing-function: ease; transition: $default-transition; }
 .hamburger-inner::after, .hamburger-inner::before { content: ""; display: block; }
 .hamburger-inner::before { top: -7px;}
 .hamburger-inner::after { top: -14px;  }
@@ -393,10 +393,10 @@
         display: block;
     }
     .header__top-left{
-        padding-left: 50px;
+        padding-left: 45px;
     }
     .header__top-right{
-        padding-right: 35px;
+        //padding-right: 35px;
     }
     
     .header-search{
@@ -553,23 +553,24 @@
     }
     .header__contact{
         padding-right: 0;
+        margin-bottom: 0;
         br{
             display:none;
         }
     }
-    .header__contact-phone {
-        font-size: 12px;
-        line-height: 15px;
+    .header__contact-phone{
+        font-size: 14px;
     }
+    
     .header__contact-email{
         display: none;
     }
     .header__top {
-        padding: 14px 0;
-        height: 70px;
+        padding: 12px 0;
+        height: 60px;
     }
     .header{
-        height: 70px;
+        height: 60px;
     }
     .nav-item:hover .nav-item__link{
          color: $color-dark;
@@ -580,34 +581,36 @@
             color: $color-dark;
         }
     }
-    
+    .logo__slogan{
+        font-size:9px;
+        line-height: 11px;
+    }
+    .logo{
+        width: 100px;
+    }
 }
 
 @media screen and (max-width:575px) {
+    .header__contact-phone {
+        font-size: 12px;
+        line-height: 15px;
+    }
     
 }
 
 @media screen and (max-width:479px) {
-    .header__top-left {
-        padding-left: 0;
-    }
-    .header__top-right{
-        padding-right: 0;
-    }
-    .header__top {
-        padding: 7px 0 52px;
-        height: 100px;
-    }
-    .header{
-        height: 100px;
-    }
-    .menu-trigger{
-        top: 60px;
-    }
-    .header-search--mobile{
-        top: 60px;
-    }
-    .header__contact-phone{
+    .header__contact-phone {
+        font-size: 11px;
+        line-height: 13px;
         padding-left: 25px;
     }
+    
+    .header__wrapper{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .menu-trigger{
+        left: 10px;
+    }
+    
 }
